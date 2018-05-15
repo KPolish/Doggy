@@ -17,7 +17,7 @@
       <div class="column">
         <div class="notification is-info">
           <figure class="image is-squre">
-            <img src="https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg" alt="">
+            <img src="https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg" alt>
           </figure>
         </div>
       </div>
@@ -28,7 +28,7 @@
           </div>
         <div class="message-body">
       <figure class="image is-squre">
-        <img v-bind:src="image" alt="">
+        <img alt v-bind:src="image">
       </figure>
           </div>
         </div>
