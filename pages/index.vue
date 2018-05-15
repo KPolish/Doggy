@@ -35,9 +35,11 @@
       </div>
     </div>
     <div class="box">
-      <a v-for="dog in dogs" v-bind:key="dog" href="#" class="button">
+      <h1 class="title">Dog list</h1>
+      <span v-for="dog in dogs" v-bind:key="dog"></span>
+      <a class="button is-success is-rounded" href="#">
         {{dog}}
-      </a>
+      </a> &nbsp;
     </div>
   </section>
 </template>
