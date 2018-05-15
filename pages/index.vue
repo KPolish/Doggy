@@ -12,6 +12,11 @@
       <div class="message-header">what is dog</div>
       <div class="message-body">데꿀데굴멍멍왈왈</div>
     </article>
+    <div class="container">
+      <figure class="image">
+          <img src="https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg" alt="">
+      </figure>
+    </div>
   </section>
 </template>
 
