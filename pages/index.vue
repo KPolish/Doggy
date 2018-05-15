@@ -11,7 +11,7 @@
     <br>
     <article class="message">
       <div class="message-header">what is dog</div>
-      <div class="message-body">데꿀데굴멍멍왈왈</div>
+      <div class="message-body">데꿀데굴멍멍왈왈 개정보는 https://dog.ceo/dog-api/documentation/</div>
     </article>
     <div class="columns">
       <div class="column">
@@ -34,6 +34,11 @@
         </div>
       </div>
     </div>
+    <div class="box">
+      <a v-for="dog in dogs" v-bind:key="dog" href="#" class="button">
+        {{dog}}
+      </a>
+    </div>
   </section>
 </template>
 
@@ -45,7 +50,8 @@
       },
       async asyncData() {
         const myImage = await axios.get('https://dog.ceo/api/breeds/image/random');
-        return { image: myImage.data.message };
+        const myDogs = await axios.get('https://dog.ceo/api/breeds/list/all');
+        return { image: myImage.data.message, dogs: myDogs.data.message};
       }
     };
   </script>
