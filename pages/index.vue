@@ -8,28 +8,44 @@
         </div>
       </div>
     </div>
+    <br>
     <article class="message">
       <div class="message-header">what is dog</div>
       <div class="message-body">데꿀데굴멍멍왈왈</div>
     </article>
     <div class="columns">
-    <div class="container">
-      <figure class="image">
-          <img src="https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg" alt="">
+      <div class="column">
+        <div class="notification is-info">
+          <figure class="image is-squre">
+            <img src="https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg" alt="">
+          </figure>
+        </div>
+      </div>
+      <div class="column">
+        <div class="message is-info">
+          <div class="message-header">
+            <p>today's canine</p>
+          </div>
+        <div class="message-body">
+      <figure class="image is-squre">
+        <img v-bind:src="image" alt="">
       </figure>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="column">
-  </div>
   </section>
 </template>
 
 <script>
-  import axios from 'axios';
-  export default {
-    data() { return{} },
-    asynData() {
-      return {};
-    }
-  };
-</script>
+    import axios from 'axios';
+    export default {
+      data() {
+        return {};
+      },
+      async asyncData() {
+        const myImage = await axios.get('https://dog.ceo/api/breeds/image/random');
+        return { image: myImage.data.message };
+      }
+    };
+  </script>
