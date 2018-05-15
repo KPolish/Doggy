@@ -12,13 +12,24 @@
       <div class="message-header">what is dog</div>
       <div class="message-body">데꿀데굴멍멍왈왈</div>
     </article>
+    <div class="columns">
     <div class="container">
       <figure class="image">
           <img src="https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg" alt="">
       </figure>
     </div>
+  </div>
+  <div class="column">
+  </div>
   </section>
 </template>
 
 <script>
+  import axios from 'axios';
+  export default {
+    data() { return{} },
+    asynData() {
+      return {};
+    }
+  };
 </script>
