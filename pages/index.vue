@@ -13,7 +13,7 @@
       <div class="message-header">what is dog</div>
       <div class="message-body">데꿀데굴멍멍왈왈 개정보는 https://dog.ceo/dog-api/documentation/</div>
     </article>
-    <div class="columns">
+    <article class="columns">
       <div class="column">
         <div class="notification is-info">
           <figure class="image is-squre">
@@ -33,15 +33,15 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="box">
+    </article>
+    <article class="box">
       <h1 class="title">Dog list</h1>
       <span v-for="dog in dogs" v-bind:key="dog">
       <nuxt-link :to="'/dogs/' + dog" class="button is-success is-rounded" href="#">
         {{dog}}
       </nuxt-link> &nbsp;
     </span>
-    </div>
+    </article>
   </section>
 </template>
 

@@ -1,22 +1,29 @@
 <template>
     <section class="section">
-        <article class="hero">
+        <article class="hero is-info">
             <div class="hero-body">
                 <div class="container">
-                    <h1 class="title">저는 {{dogName}} 입니다.</h1>
+                    <h1 class="title">저는 {{dogName.toUpperCase()}} 입니다.</h1>
                     <h2 class="subtitle">그러합니다.</h2>
                 </div>
             </div>
         </article>
-
-        {{dogName}}
+    <article class="notification">
+        <figure class="image is-square">
+            <img :src="image" alt="">
+        </figure>
+    </article>
     </section>
 </template>
 <script>
+    import axios from 'axios';
+
     export default {
-        asyncData({params}) {
+        async asyncData({params}) {
+            const image = await axios.get(`https://dog.ceo/api/breed/${params.dog}image/random`);
             return{
-                dogName: params.dog
+                dogName: params.dog,
+                image: image.data.message
             };
         }
     }
