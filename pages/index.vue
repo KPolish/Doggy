@@ -37,9 +37,9 @@
     <div class="box">
       <h1 class="title">Dog list</h1>
       <span v-for="dog in dogs" v-bind:key="dog">
-      <a class="button is-success is-rounded" href="#">
+      <nuxt-link to="#" class="button is-success is-rounded" href="#">
         {{dog}}
-      </a> &nbsp;
+      </nuxt-link> &nbsp;
     </span>
     </div>
   </section>
