@@ -32,7 +32,7 @@
         }
             return{
                 dogName: params.dog,
-                image: images
+                images: images
             };
         }
     }
